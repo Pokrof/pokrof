@@ -35,11 +35,6 @@ function addZero(i) {
 setNotificationDemoBody();
 resetUI();
 
-messaging.getToken()
-                .then(function(currentToken) {
-                    console.log(currentToken);
-                    alert(currentToken);
-                });
 
 if (
     'Notification' in window &&
@@ -49,6 +44,12 @@ if (
     'postMessage' in window
 ) {
     var messaging = firebase.messaging();
+
+    messaging.getToken()
+                .then(function(currentToken) {
+                    console.log(currentToken);
+                    alert(currentToken);
+                });
 
     // already granted
     if (Notification.permission === 'granted') {
