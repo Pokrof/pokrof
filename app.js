@@ -53,6 +53,7 @@ if (
             .then(function(currentToken) {
                     console.log(currentToken)
             })
+        });
 
     // already granted
     if (Notification.permission === 'granted') {
