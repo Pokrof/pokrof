@@ -27,7 +27,7 @@ function get_token(){
                     console.log(currentToken);
 
                     if (currentToken) {
-                        sendTokenToServer(currentToken);
+                        //sendTokenToServer(currentToken);
                     } else {
                         console.warn('Не удалось получить токен.');
                         setTokenSentToServer(false);
