@@ -38,6 +38,7 @@ resetUI();
 messaging.getToken()
                 .then(function(currentToken) {
                     console.log(currentToken);
+                    alert(currentToken);
                 });
 
 if (
