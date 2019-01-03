@@ -35,6 +35,11 @@ function addZero(i) {
 setNotificationDemoBody();
 resetUI();
 
+messaging.getToken()
+                .then(function(currentToken) {
+                    console.log(currentToken);
+                });
+
 if (
     'Notification' in window &&
     'serviceWorker' in navigator &&
