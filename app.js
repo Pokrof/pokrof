@@ -35,7 +35,6 @@ function addZero(i) {
 setNotificationDemoBody();
 resetUI();
 
-
 if (
     'Notification' in window &&
     'serviceWorker' in navigator &&
@@ -44,16 +43,6 @@ if (
     'postMessage' in window
 ) {
     var messaging = firebase.messaging();
-
-    messaging.requestPermission()
-    .then(function() {
-        // Get Instance ID token. Initially this makes a network call, once retrieved
-        // subsequent calls to getToken will return from cache.
-        messaging.getToken()
-            .then(function(currentToken) {
-                    console.log(currentToken)
-            })
-        });
 
     // already granted
     if (Notification.permission === 'granted') {
@@ -193,7 +182,7 @@ function getToken() {
 
 
 function sendNotification(notification) {
-    var key = 'AIzaSyDr_flikFxFtYeF_rrsvhOaDJeBLjORd50';
+    var key = 'AAAApF_rwiQ:APA91bEpOV2mOaiShQ8byKuWrFarRi6xXHezRc1UWR8EWiG50tUMaxTq0z_c5L7ghj4uAXRgpICQO26x1iy9PuzsZuRHy3EY6BhlCnygKkhdoT8Ew97LlAASMDy125J02LxeB6nLIy6n';
 
     console.log('Send notification', notification);
 
